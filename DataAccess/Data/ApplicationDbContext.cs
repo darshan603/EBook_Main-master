@@ -17,14 +17,19 @@ namespace DataAccess.Data
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ApplicationRole> ApplicationRoles { get; set; }
-        public DbSet<Books> Books { get; set; }
+        //public DbSet<Books> Books { get; set; }
         public DbSet<Carts> Carts { get; set; }
         public DbSet<CartDetails> CartDetails { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
-        public DbSet<Comments> Comments { get; set; }
+        //public DbSet<Comments> Comments { get; set; }
 
-       
+        public DbSet<Product> Product { get; set; }
+        public DbSet<ProductImages> ProductImages { get; set; }
+        public DbSet<CustomizationOpt> CustomizationOpt { get; set; }
+        public DbSet<OrderOptions> OrderOptions { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

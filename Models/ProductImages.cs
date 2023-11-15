@@ -5,19 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utility;
 
 namespace Models
 {
-    public class CartDetails
+    public class ProductImages
     {
         [Key]
-        public int Id { get; set; }
+        public int ProdImgId { get; set; }
         public int ProdId { get; set; }
         [ForeignKey("ProdId")]
         public Product Product { get; set; }
-        public int CartId { get; set; }
-        [ForeignKey("CartId")]
-        public Carts Carts { get; set; }
-        public int Qty { get; set; }
+        public string ImgUrl { get; set; }
     }
 }

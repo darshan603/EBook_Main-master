@@ -18,13 +18,21 @@ namespace DataAccess.Repository
             _db = db;
             ApplicationRole = new ApplicationRoleRepository(_db);
             ApplicationUser = new ApplicationUserRepository(_db);
-            Books = new BooksRepository(_db);
+            //Books = new BooksRepository(_db);
             Order = new OrderRepository(_db);
             OrderDetails = new OrderDetailsRepository(_db);
             Cart = new CartRepository(_db);
             CartDetails = new CartDetailsRepository(_db);
-            Comments = new CommentsRepository(_db);
+            //Comments = new CommentsRepository(_db);
             SP_Call = new SP_Call(_db);
+
+
+            Product = new ProductRepository(_db);
+            ProductImages = new ProductImagesRepository(_db);
+            CustomizationOpt = new CustomizationOptRepository(_db);
+            OrderOptions = new OrderOptionsRepository(_db);
+
+
         }
 
         public IApplicationRoleRepository ApplicationRole { get; private set; }
@@ -36,6 +44,13 @@ namespace DataAccess.Repository
         public ICartDetailsRepository CartDetails { get; private set; }
         public ICommentsRepository Comments { get; private set; }
         public ISP_Call SP_Call { get; private set; }
+
+        public IProductRepository Product { get; private set; }
+        public IProductImagesRepository ProductImages { get; private set; }
+        public ICustomizationOptRepository CustomizationOpt { get; private set; }
+        public IOrderOptionsRepository OrderOptions { get; private set; }
+
+
 
         public void Dispose()
         {

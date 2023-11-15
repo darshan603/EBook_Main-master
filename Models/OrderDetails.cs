@@ -11,15 +11,15 @@ namespace Models
     public class OrderDetails
     {
         [Key]
-        public int Id { get; set; }
+        public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
         [ForeignKey("OrderId")]
         public Orders Orders { get; set; }
-        public int BookId { get; set; }
-        [ForeignKey("BookId")]
-        public Books Books { get; set; }
+        public int ProdId { get; set; }
+        [ForeignKey("ProdId")]
+        public Product Product { get; set; }
         public int Qty { get; set; }
-        //public int Qty { get; set; }
+        public double SubTotal { get; set; }
 
     }
 }

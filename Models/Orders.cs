@@ -12,7 +12,7 @@ namespace Models
     public class Orders
     {
         [Key]
-        public int Id { get; set; }
+        public int OrderId { get; set; }
         public string UserId { get; set; }
         [ForeignKey("UserId")]
         public ApplicationUser User { get; set; }

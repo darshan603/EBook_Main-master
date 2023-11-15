@@ -18,6 +18,17 @@ namespace DataAccess.Repository.IRepository
         IOrderDetailsRepository OrderDetails { get; }
         ICommentsRepository Comments { get; }
         ISP_Call SP_Call { get; }
+
+        IProductRepository Product { get; }
+        IProductImagesRepository ProductImages { get; }
+        ICustomizationOptRepository CustomizationOpt { get; }
+        IOrderOptionsRepository OrderOptions { get; }
+
+
+
+
+
+
         void SaveAsync();
         Task<IDbContextTransaction> BeginTransactionAsync();
         void CommitAsync(IDbContextTransaction transaction);
